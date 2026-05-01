@@ -1,0 +1,4 @@
+LSTMModel(
+  (lstm): LSTM(14, 50, num_layers=2, batch_first=True, dropout=0.2)
+  (fc): Linear(in_features=50, out_features=1, bias=True)
+)
