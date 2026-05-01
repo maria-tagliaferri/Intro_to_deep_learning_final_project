@@ -1,0 +1,143 @@
+TCNModel(
+  (tcn): TemporalConvNet(
+    (network): Sequential(
+      (0): TemporalBlock(
+        (network): Sequential(
+          (0): ParametrizedConv1d(
+            8, 80, kernel_size=(5,), stride=(1,), padding=(4,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (1): Chomp1d()
+          (2): ReLU()
+          (3): Dropout(p=0.15, inplace=False)
+          (4): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(4,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (5): Chomp1d()
+          (6): ReLU()
+          (7): Dropout(p=0.15, inplace=False)
+        )
+        (downsample): Conv1d(8, 80, kernel_size=(1,), stride=(1,))
+        (relu): ReLU()
+      )
+      (1): TemporalBlock(
+        (network): Sequential(
+          (0): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(8,), dilation=(2,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (1): Chomp1d()
+          (2): ReLU()
+          (3): Dropout(p=0.15, inplace=False)
+          (4): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(8,), dilation=(2,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (5): Chomp1d()
+          (6): ReLU()
+          (7): Dropout(p=0.15, inplace=False)
+        )
+        (relu): ReLU()
+      )
+      (2): TemporalBlock(
+        (network): Sequential(
+          (0): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(16,), dilation=(4,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (1): Chomp1d()
+          (2): ReLU()
+          (3): Dropout(p=0.15, inplace=False)
+          (4): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(16,), dilation=(4,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (5): Chomp1d()
+          (6): ReLU()
+          (7): Dropout(p=0.15, inplace=False)
+        )
+        (relu): ReLU()
+      )
+      (3): TemporalBlock(
+        (network): Sequential(
+          (0): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(32,), dilation=(8,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (1): Chomp1d()
+          (2): ReLU()
+          (3): Dropout(p=0.15, inplace=False)
+          (4): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(32,), dilation=(8,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (5): Chomp1d()
+          (6): ReLU()
+          (7): Dropout(p=0.15, inplace=False)
+        )
+        (relu): ReLU()
+      )
+      (4): TemporalBlock(
+        (network): Sequential(
+          (0): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(64,), dilation=(16,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (1): Chomp1d()
+          (2): ReLU()
+          (3): Dropout(p=0.15, inplace=False)
+          (4): ParametrizedConv1d(
+            80, 80, kernel_size=(5,), stride=(1,), padding=(64,), dilation=(16,)
+            (parametrizations): ModuleDict(
+              (weight): ParametrizationList(
+                (0): _WeightNorm()
+              )
+            )
+          )
+          (5): Chomp1d()
+          (6): ReLU()
+          (7): Dropout(p=0.15, inplace=False)
+        )
+        (relu): ReLU()
+      )
+    )
+  )
+  (linear): Linear(in_features=7600, out_features=1, bias=True)
+)

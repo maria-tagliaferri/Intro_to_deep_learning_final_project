@@ -1,0 +1,4 @@
+subject,speed,trial,frequency,target_frequency_hz,leg,n_samples,rmse,r2
+AB07_Leo,0mps,trial_1,50Hz,50,R,356,0.028347695943126302,-1.882667326693865
+AB07_Leo,0mps,trial_1,25Hz,25,R,131,0.03332470790909792,-2.5866169014214493
+AB07_Leo,0mps,trial_1,10Hz,10,R,0,,
